@@ -1,2 +1,5 @@
 requests
-bs4
+beautifulsoup4
+
+Fix: add missing dependencies to requirements.txt
+
