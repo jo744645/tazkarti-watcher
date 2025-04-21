@@ -1,0 +1,24 @@
+name: Tazkarti Checker
+
+on:
+  schedule:
+    - cron: "*/1 * * * *" # كل دقيقة
+  workflow_dispatch: # تشغيل يدوي
+
+jobs:
+  check-tickets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run checker script
+        run: python tazkarti_checker.py
