@@ -1,5 +1,0 @@
-requests
-beautifulsoup4
-
-Fix: add missing dependencies to requirements.txt
-
